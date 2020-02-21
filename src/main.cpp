@@ -246,7 +246,7 @@ void loop() {
 
     // otherwise, check for DMP data ready interrupt (this should happen frequently)
     } else if (mpuIntStatus & _BV(MPU6050_INTERRUPT_DMP_INT_BIT)) {
-
+    //.gitignore
         // read a packet from FIFO
 	while(fifoCount >= packetSize){ // Lets catch up to NOW, someone is using the dreaded delay()!
 		mpu.getFIFOBytes(fifoBuffer, packetSize);
